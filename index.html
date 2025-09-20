@@ -231,14 +231,18 @@
       function ageVerification() {
         let name = prompt("What's your name?");
         let age = prompt("How old are you?");
-        if (age >= 18) {
+        if (age >= 18 && name.length > 0 && age.length > 0) {
           alert("You are old enough. Enjoy the show, " + name + "!");
           window.location.href =
             "https://www.youtube.com/playlist?list=PL-uopgYBi65HwiiDR9Y23lomAkGr9mm-S";
         } else {
-          alert(
-            "Sorry, " + name + ". You're not old enough to watch this show."
-          );
+          if (age <= 18 && name.length > 0 && age.length > 0) {
+            alert(
+              "Sorry, " + name + ". You're not old enough to watch this show."
+            );
+          } else {
+            alert("Please input your name or age.");
+          }
         }
       }
 
