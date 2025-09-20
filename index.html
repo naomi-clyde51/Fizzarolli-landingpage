@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fizzarolli</title>
+    <style>
+      body {
+        background-color: rgb(255, 148, 166);
+      }
+
+      h1,
+      h2,
+      p {
+        text-align: center;
+      }
+
+      .container {
+        max-width: 750px;
+        margin: 350px;
+        border-radius: 40px;
+        text-align: center;
+        padding: 25px;
+      }
+
+      .container__content {
+        background-color: rgb(224, 255, 195);
+        max-width: 750px;
+        box-shadow: 3px 10px 30px rgb(0 0 0 / 10%);
+        border-radius: 40px;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 60px;
+        transition: all 150ms ease-in-out;
+      }
+
+      h1:hover {
+        transform: scale(1.4);
+        -webkit-text-stroke-width: 2px;
+        background: -webkit-linear-gradient(#eaffe1, rgb(88, 255, 199));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: rgb(0, 82, 78);
+        cursor: initial;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-style: italic;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .name {
+        color: purple;
+        text-decoration: underline;
+      }
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+
+      button {
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+        background: white;
+      }
+
+      button:hover {
+        background: yellow;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+      }
+
+      .theme-button {
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px 10px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        background: white;
+      }
+
+      .theme-button:hover {
+        background: yellow;
+      }
+
+      img:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+        border-radius: 30px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+      }
+
+      .ozzie {
+        background-image: url("https://64.media.tumblr.com/509631fe4935db237b8970d7a3fde871/19eb6cc105f97ca8-6f/s1280x1920/305debd77e408acd2f8791949087f72755d19391.jpg");
+        background-size: cover;
+        background-color: rgb(16, 1, 54);
+        color: white;
+      }
+
+      .ozzie .container__content {
+        background-color: rgb(57, 68, 193);
+        border: solid 3px rgb(47, 255, 248);
+      }
+
+      .ozzie h1:hover {
+        -webkit-text-stroke-width: 2px;
+        background: -webkit-linear-gradient(#74faff, rgb(11, 56, 181));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: rgb(240, 255, 255);
+      }
+
+      .ozzie footer {
+        color: rgb(47, 255, 248);
+      }
+
+      .ozzie .name {
+        text-decoration: underline;
+      }
+
+      .ozzie .theme-button {
+        background-color: rgba(16, 1, 54, 0.6);
+        color: white;
+        border: solid 2px rgb(47, 255, 248);
+      }
+
+      .ozzie .theme-button:hover {
+        background-color: rgb(57, 68, 193);
+        color: white;
+      }
+
+      .ozzie .name {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="theme-button">Change Theme</button>
+      <div class="container__content">
+        <h1>Fizzarolli</h1>
+        <h2>
+          "I'm a performer! I sing, I dance, I promote products that I don't
+          actually use. I DON'T do danger!"
+        </h2>
+
+        <div class="grid">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/817/original/fizz_oopsoutfit_02.png?1757987946"
+            alt=""
+            class="fizz-intro-picture"
+          />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/816/original/Screenshot_14.png?1757987926"
+            alt=""
+          />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/815/original/pjs.png?1757987908"
+            alt=""
+          />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/818/original/Screenshot_14_%282%29.png?1757988114"
+            alt=""
+          />
+        </div>
+        <p>
+          Fizzarolli is a famous performer and entertainer, as well as a former
+          antagonist turned supporting character in Helluva Boss who made his
+          debut in "Ozzie's".
+        </p>
+
+        <button class="age-verification">Watch "Helluva Boss"</button>
+      </div>
+    </div>
+    <hr />
+
+    <footer>
+      <p>Coded with 💜 by <span class="name">Naomi Clyde</span></p>
+    </footer>
+
+    <script>
+      // Figure out prompt so it pops up after pressing "Watch Helluva Boss" button, and understand cascading of JavaScript
+
+      // Selects/takes the body tag... and changes the theme to the Ozzie class
+      function changeTheme() {
+        let ozzieTheme = document.querySelector("body");
+
+        // ozzieTheme.classList.toggle("ozzie");
+
+        // div.classList.add("foo", "bar", "baz");
+        if (ozzieTheme.classList.contains("ozzie")) {
+          ozzieTheme.classList.remove("ozzie");
+        } else {
+          ozzieTheme.classList.add("ozzie");
+        }
+      }
+
+      /*          if (body.classList.contains("ozzie")) {
+            body.classList.remove("ozzie");
+          } else {
+            body.classList.add("ozzie");
+          }*/
+
+      // Selecting and assigning function to the Change Theme button in HTML
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function ageVerification() {
+        let name = prompt("What's your name?");
+        let age = prompt("How old are you?");
+        if (age >= 18) {
+          alert("You are old enough. Enjoy the show, " + name + "!");
+          window.location.href =
+            "https://www.youtube.com/playlist?list=PL-uopgYBi65HwiiDR9Y23lomAkGr9mm-S";
+        } else {
+          alert(
+            "Sorry, " + name + ". You're not old enough to watch this show."
+          );
+        }
+      }
+
+      let ageVer = document.querySelector(".age-verification");
+      ageVer.addEventListener("click", ageVerification);
+    </script>
+
+    <!--function darkTheme () {
+            let changeTheme = document.querySelector("body");
+            changeTheme.classList.add("dark");
+        }
+
+      let themeChange = document.querySelector("button");
+      themeChange.addEventListener("click", darkTheme);-->
+  </body>
+</html>
